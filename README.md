@@ -13,7 +13,7 @@ VT100
 - Choose area where getline is visible.
 - Scroll/wrap the getline area
 - Simple api to frontend, bytes in, bytes out.
-- 
+
 
 ## Planned examples:
 
