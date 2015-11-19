@@ -10,7 +10,7 @@ type Color struct {
 
 func NewColor() *Color {
 	c := &Color{
-		Fg:   1,
+		Fg:   7,
 		Bg:   0,
 		Bold: false,
 	}
@@ -21,9 +21,11 @@ func (c *Color) String() string {
 	s := "\033["
 	if c.Bold {
 		s += "1;"
+	} else {
+		s += "0;"
 	}
 	s += "3" + strconv.Itoa(c.Fg)
-	//s += ";4" + strconv.Itoa(c.Bg)
+	s += ";4" + strconv.Itoa(c.Bg)
 	s += "m"
-	return "\033[34m"
+	return s
 }
